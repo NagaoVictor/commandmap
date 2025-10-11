@@ -1,0 +1,58 @@
+# Ativar servidor web Apache
+sudo systemctl start apache2
+
+# Ativar servidor SSH
+sudo systemctl start ssh
+
+# Verificar se Nginx está ativo
+systemctl status nginx
+
+# Reiniciar MySQL
+sudo systemctl restart mysql
+
+# Configurar Nginx para iniciar automaticamente no boot
+sudo systemctl enable nginx
+
+
+# Iniciar serviço
+sudo service apache2 start
+
+# Parar serviço
+sudo service apache2 stop
+
+# Reiniciar serviço
+sudo service apache2 restart
+
+# Ver status
+sudo service apache2 status
+
+
+sudo /etc/init.d/apache2 start
+sudo /etc/init.d/apache2 stop
+sudo /etc/init.d/apache2 restart
+
+systemctl list-units --type=service --state=running
+
+sudo journalctl -u nome_servico -f
+# Exemplo:
+sudo journalctl -u nginx -f
+
+sudo ss -tulnp
+# ou
+sudo netstat -tulnp
+
+
+
+ ************************* Ativação total *****************************
+
+Crie um arquivo 
+start_servers.sh
+
+#!/bin/bash
+sudo systemctl start apache2
+sudo systemctl start mysql
+sudo systemctl start ssh
+echo "Todos os servidores iniciados!"
+
+chmod +x start_servers.sh
+./start_servers.sh

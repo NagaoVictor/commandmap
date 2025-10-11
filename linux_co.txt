@@ -1,0 +1,28 @@
+touch arquivo_exemplo.txt        # cria arquivo
+nano arquivo_exemplo.txt         # edita arquivo
+cp arquivo_exemplo.txt copia.txt # copia arquivo
+mv arquivo_exemplo.txt renomeado.txt # move/renomeia
+rm arquivo_exemplo.txt           # remove arquivo
+rm -rf pasta_exemplo             # remove pasta e conteúdo
+cat arquivo_exemplo.txt          # exibe conteúdo
+grep -r "palavra" .              # busca palavra dentro dos arquivos
+wc -l arquivo_exemplo.txt        # conta linhas
+
+zip -r backup.zip PastaExemplo   # compacta pasta
+unzip backup.zip                 # descompacta
+tar -czvf backup.tar.gz PastaExemplo  # compressão alternativa
+tar -xzvf backup.tar.gz
+
+sudo apt update && sudo apt upgrade -y         # atualizar pacotes
+sudo apt autoremove -y                         # remover pacotes desnecessários
+sudo apt clean                                 # limpar cache de pacotes
+sudo journalctl --vacuum-time=7d              # limpar logs antigos do sistema
+sync; echo 3 | sudo tee /proc/sys/vm/drop_caches  # limpar cache de memória
+
+top                        # processos em execução
+htop                       # interface mais amigável (precisa instalar)
+df -h                      # espaço em disco
+du -sh *                    # tamanho das pastas
+free -h                    # uso de memória
+ping google.com            # teste de conectividade
+traceroute google.com      # rota até host

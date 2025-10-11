@@ -1,0 +1,35 @@
+New-Item -ItemType Directory -Path "$HOME\Prompts\Python"
+New-Item -ItemType Directory -Path "$HOME\Prompts\CSharp"
+Set-Location "$HOME\Prompts"
+Get-ChildItem
+
+New-Item "arquivo_exemplo.txt" -ItemType File
+Add-Content "arquivo_exemplo.txt" "Olá mundo"
+Get-Content "arquivo_exemplo.txt"
+Copy-Item "arquivo_exemplo.txt" "copia.txt"
+Move-Item "arquivo_exemplo.txt" "renomeado.txt"
+Remove-Item "arquivo_exemplo.txt"
+Remove-Item "pasta_exemplo" -Recurse -Force
+Select-String -Path *.txt -Pattern "palavra"
+
+Compress-Archive -Path "PastaExemplo" -DestinationPath "backup.zip"
+Expand-Archive "backup.zip" -DestinationPath "PastaExemplo"
+
+Clear-Host
+Clear-RecycleBin -Force
+ipconfig /flushdns
+ipconfig /all
+ping google.com
+tracert google.com
+Get-Process                        # listar processos
+Stop-Process -Id 1234 -Force       # finalizar processo
+Remove-Item "$env:TEMP\*" -Recurse -Force
+Get-EventLog -LogName System -Newest 50  # ver últimos eventos do sistema
+Get-NetAdapter                     # informações de adaptadores de rede
+
+
+************ ALIAS ***************
+
+Get-Alias
+
+

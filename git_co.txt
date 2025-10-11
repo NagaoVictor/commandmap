@@ -1,0 +1,101 @@
+# Configurar usuário
+git config --global user.name "SeuNome"
+git config --global user.email "seuemail@exemplo.com"
+
+# Ver configuração atual
+git config --list
+
+# Criar repositório local
+git init nome_do_repositorio
+
+# Clonar repositório remoto (HTTPS)
+git clone https://github.com/usuario/repositorio.git
+
+# Clonar repositório remoto (SSH)
+git clone git@github.com:usuario/repositorio.git
+
+# Ver status dos arquivos
+git status
+
+# Adicionar arquivos ao stage
+git add arquivo.txt       # um arquivo
+git add .                 # todos os arquivos
+
+# Criar commit
+git commit -m "Mensagem do commit"
+
+# Alterações rápidas (commit + add automático)
+git commit -am "Mensagem"
+
+# Ver histórico de commits
+git log
+
+# Histórico resumido
+git log --oneline
+
+# Histórico de um arquivo específico
+git log arquivo.txt
+
+# Listar branches
+git branch
+
+# Criar nova branch
+git branch nome_da_branch
+
+# Mudar de branch
+git checkout nome_da_branch
+
+# Criar e mudar de branch ao mesmo tempo
+git checkout -b nome_da_branch
+
+# Excluir branch local
+git branch -d nome_da_branch
+
+# Listar remotes
+git remote -v
+
+# Adicionar remote
+git remote add origin https://github.com/usuario/repositorio.git
+
+# Atualizar remote
+git remote set-url origin git@github.com:usuario/repositorio.git
+
+# Enviar alterações para remoto
+git push origin main       # ou branch específica
+
+# Baixar alterações do remoto
+git pull origin main
+
+# Diferenças entre alterações
+git diff
+
+# Diferenças de um arquivo específico
+git diff arquivo.txt
+
+# Comparar branches
+git diff branch1..branch2
+
+# Resetar alterações locais
+git checkout -- arquivo.txt
+
+# Resetar branch inteiro para último commit
+git reset --hard HEAD
+
+# Desfazer último commit
+git reset --soft HEAD~1
+
+# Ver conflitos de merge
+git status
+
+# Alias para log resumido
+git config --global alias.lg "log --oneline --graph --all --decorate"
+
+# Alias para status rápido
+git config --global alias.st status
+
+# Alias para commit + add todos arquivos
+git config --global alias.ci "commit -am"
+
+git lg
+git st
+git ci "Mensagem rápida"

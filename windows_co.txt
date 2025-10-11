@@ -1,0 +1,28 @@
+mkdir C:\Users\%USERNAME%\Prompts\Python
+mkdir C:\Users\%USERNAME%\Prompts\CSharp
+cd C:\Users\%USERNAME%\Prompts
+dir
+
+type nul > arquivo_exemplo.txt
+notepad arquivo_exemplo.txt
+copy arquivo_exemplo.txt copia.txt
+move arquivo_exemplo.txt renomeado.txt
+del arquivo_exemplo.txt
+rmdir /s /q pasta_exemplo
+type arquivo_exemplo.txt
+find /i "palavra" arquivo_exemplo.txt
+
+tar -a -c -f backup.zip PastaExemplo
+tar -xf backup.zip
+
+cleanmgr /sagerun:1                 # limpar disco (GUI automática)
+ipconfig /flushdns                  # limpar cache DNS
+ipconfig /all                       # informações de rede detalhadas
+ping google.com                     # teste de conectividade
+tracert google.com                  # rota até host
+netstat -ano                        # mostrar portas e processos
+tasklist                            # listar processos
+taskkill /PID 1234 /F               # finalizar processo específico
+del /q/f/s %TEMP%\*                  # limpar pasta temporária do usuário
+del /q/f/s C:\Windows\Temp\*        # limpar pasta temporária do sistema
+systeminfo                          # informações detalhadas do sistema
